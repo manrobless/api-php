@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7;
 class DocDigitales {
   public function generacionFactura($factura) {
     try {
-      $uriGeneracion = "http://api.docdigitales.com/v1/facturas/generar";
+      $uriGeneracion = "https://api.docdigitales.com/v1/facturas/generar";
       $generada = $this->getPostResponse($uriGeneracion, $factura);
       return $generada;
     } catch (Exception $e) {
@@ -17,7 +17,7 @@ class DocDigitales {
 
   public function cancelacionFactura($cancelacion) {
     try {
-      $uriCancelacion = "http://api.docdigitales.com/v1/facturas/cancelar";
+      $uriCancelacion = "https://api.docdigitales.com/v1/facturas/cancelar";
       $cancelada = $this->getPostResponse($uriCancelacion, $cancelacion);
       return $cancelada;
     } catch (Exception $e) {
@@ -28,7 +28,7 @@ class DocDigitales {
 
   public function envioFactura($envio) {
     try {
-      $uriEnvio = "http://api.docdigitales.com/v1/facturas/enviar";
+      $uriEnvio = "https://api.docdigitales.com/v1/facturas/enviar";
       $enviada = $this->getPostResponse($uriEnvio, $envio);
       return $enviada;
     } catch (Exception $e) {
@@ -39,7 +39,7 @@ class DocDigitales {
 
   public function descargaFactura($descarga) {
     try {
-      $uriDescarga = "http://api.docdigitales.com/v1/facturas/descargar";
+      $uriDescarga = "https://api.docdigitales.com/v1/facturas/descargar";
       $descargada = $this->getPostResponse($uriDescarga, $descarga);
       return $descargada;
     } catch (Exception $e) {
